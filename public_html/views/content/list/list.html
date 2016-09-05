@@ -1,0 +1,24 @@
+<div class="panel panel-default" layout-padding flex>
+    <!-- Default panel contents -->
+    <div class="panel-heading">Liste des wikis</div>
+
+    <md-data-table selectable-rows="tableIsSelectable" sortable="sortable" sortable-columns="tableIsSortable">
+
+        <md-data-table-header-row>
+            <md-data-table-column align-rule="left">#</md-data-table-column>
+            <md-data-table-column align-rule="left">Titre</md-data-table-column>
+            <md-data-table-column align-rule="left">Categorie</md-data-table-column>
+            <md-data-table-column align-rule="left">Actions</md-data-table-column>
+        </md-data-table-header-row>
+
+        <md-data-table-row
+                table-row-id="item.id"
+                ng-repeat="item in articles">
+            <md-data-table-cell>{{item.id}}</md-data-table-cell>
+            <md-data-table-cell>{{item.title}}</md-data-table-cell>
+            <md-data-table-cell>{{item.category}}</md-data-table-cell>
+            <md-data-table-cell html-content="true"><md-button class="md-raised md-primary"> voir</md-button>
+                <md-button class="md-raised md-warn">supprimer</md-button></md-data-table-cell>
+        </md-data-table-row>
+    </md-data-table>
+</div>

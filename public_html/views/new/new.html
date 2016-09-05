@@ -1,0 +1,17 @@
+<form role="form">
+  <div class="form-group">
+    <label for="title">Titre:</label>
+    <input type="text" ng-model="article.title" class="form-control" id="title">
+  </div>
+  <div class="form-group">
+    <label for="title">Categorie</label>
+    <input type="category" ng-model="article.category" class="form-control" id="category">
+  </div>
+    <div class="form-group">
+    <label for="title">Titre:</label>
+    <textarea type="text" ng-model="article.contenu" class="form-control" id="contenu"></textarea>
+  </div>
+  <button type="submit" ng-click="create()" class="btn btn-default">Ajouter</button>
+</form>
+
+
